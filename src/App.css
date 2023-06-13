@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-header{
+  background: linear-gradient(to right, #1eacfe,#0683d1);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: space-between;
+  margin-bottom: 15px;
+  font-family: 'trebuchet ms';
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
-.App-link {
-  color: #61dafb;
+.app-logo{
+  width: 80px;
+  height: 80px;
+  margin-left: 15px;
+  margin-right: 20px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-body{
+  display: inline-block;
+  padding: 10px;
+  margin: auto;
+  width: 80%;
+}
+
+.input-meme{
+  width: 20%;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  align-self: center;
+  
+}
+
+.input-meme input{
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+.btn-meme{
+  width: 20%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background: linear-gradient(to right, #1eacfe,#0683d1);
+  color: rgb(255, 255, 255);
+  font-family: 'trebuchet ms';
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-meme:hover{
+  background: linear-gradient(to right, #0683d1,#1eacfe);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);  
+  transition: 1s;
+}
+
+.meme-img{
+  width: 50%;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);  
+  margin: 20px;
 }

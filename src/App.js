@@ -1,24 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
 
+function getMemeImage() {
+  fetch('https://api.imgflip.com/get_memes')
+    .then(res => res.json())
+    .then(res => {
+      const memes = res.data.memes;
+      const randomIndex = Math.floor(Math.random() * memes.length);
+      const randomMeme = memes[randomIndex];
+      const memeImg = document.querySelector('.meme-img');
+      memeImg.src = randomMeme.url;
+    })
+}
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="app-header">
+        <img src="images/memelogo.png" className="app-logo" alt="logo" />
+        <h1>MEME GENERATOR</h1>
+      </div>
+      <center>
+        <div className="app-body">
+
+          <input type="text" placeholder="Top Text" className='input-meme' />
+          <input type="text" placeholder="Bottom Text" className='input-meme' />
+          <br />
+          <button className="btn-meme" onClick={getMemeImage}>GENERATE </button>
+          <br />
+          <img src="images/meme.jpg" className="meme-img" alt="meme appears here" />
+        </div>
+      </center>
+
     </div>
+
   );
 }
 
